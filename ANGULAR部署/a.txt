@@ -1,0 +1,21 @@
+构建：
+	1. 编译
+		ts->js
+	2. 合并
+	ng build->dist
+
+多环境:	测试|开发|生产|源码
+	angular-cli.json -> environment -> 环境文件定义
+		environment 环境测试
+			dev 开发环境
+			prod 生产环境
+	环境切换
+		package.json->scripts->start-> 添加: --env=prod   
+
+部署: 与服务端整合
+	ng build -env=prod -> dist ->copy 到 node服务器的www
+	问题：刷新会出错  如：localhost:8000/product/1 浏览器不知道访问的顺序，hash模式就可以
+	解决：客户端修改app.module->添加一个providers，hash地址策略
+		providers:[
+			{provide:LocationStrategy,userClass:HashLocationStrategy}
+		]
