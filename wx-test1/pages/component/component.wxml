@@ -1,0 +1,39 @@
+<!--pages/component/component.wxml-->
+<view>数据绑定</view>
+<view>{{msg}}</view>
+
+<!--循环 列表渲染  -->
+
+<view>{{arr}}</view>
+
+<view wx:for="{{arr}}" wx:key="{{index}}">{{item}}/{{index}}</view>
+
+<view wx:for="{{arr2}}" wx:key="{{item.id}}">{{item.name}}/{{index}}</view>
+
+<view wx:for="{{[1, 2, 3, 4, 5, 6, 7, 8, 9]}}" wx:for-item="i" wx:for-index="idx" wx:key="idx">
+  <view wx:for="{{[1, 2, 3, 4, 5, 6, 7, 8, 9]}}" wx:for-item="j" wx:for-index="idx" wx:key="idx">
+    <view wx:if="{{i <= j}}">
+      {{i}} * {{j}} = {{i * j}}
+    </view>
+  </view>
+</view>
+
+
+<block wx:for="{{['aa','bb','cc']}}" wx:key="index">
+  <view> {{index}} </view>
+  <view> {{item}} </view>
+</block>
+
+
+<view id="box">条件渲染</view>
+
+<view wx:if="{{view == 'WEBVIEW'}}"> WEBVIEW </view>
+<view wx:elif="{{true}}"> true </view>
+<view wx:else="{{false}}"> false </view>
+
+<view hidden="{{false}}">box</view>
+
+<view>事件</view>
+<button bindtap="show">按钮</button>
+
+<view>{{1}}</view>

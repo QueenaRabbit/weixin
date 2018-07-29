@@ -1,0 +1,49 @@
+{
+  "pages": [
+    "pages/component/component",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/api/api",
+    "pages/about/about"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#399",
+    "navigationBarTitleText": "微信小程序",
+    "navigationBarTextStyle": "#fff",
+    "backgroundColorTop": "#fff"
+  },
+  "tabBar": {
+    "color":"#ccc",
+    "selectedColor":"#399",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath":"images/home.png",
+        "selectedIconPath":"images/home_active.png"
+      },
+      {
+        "pagePath": "pages/component/component",
+        "text": "组件",
+        "iconPath": "images/component.png",
+        "selectedIconPath": "images/component_active.png"
+      },
+      {
+        "pagePath": "pages/api/api",
+        "text": "API",
+        "iconPath": "images/api.png",
+        "selectedIconPath": "images/api_active.png"
+      },
+      {
+        "pagePath": "pages/about/about",
+        "text": "关于",
+        "iconPath": "images/me.png",
+        "selectedIconPath": "images/me_active.png"
+      }
+    ]
+  },
+  "networkTimeout":{
+    "request":"10000"
+  }
+}

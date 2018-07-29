@@ -1,0 +1,5 @@
+/* pages/component/component.wxss */
+#box{background: blue;width: 10rpx}
+view{
+  margin: 15rpx 0;
+}
